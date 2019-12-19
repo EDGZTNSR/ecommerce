@@ -1,18 +1,23 @@
 export const products = [
   {
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
+    name: 'CEASE THESE ACTIONS',
+    price: 420,
+    description: 'A newly developed deepfried meme',
+    creator: 'AsBadAsJava',
+    source: 'CEASETHISACTIVITIES.jpg'
   },
   {
-    name: 'Phone Mini',
+    name: 'TIANANMEN SQUARE',
     price: 699,
-    description: 'A great phone with one of the best cameras'
+    description: 'Didn\'t happen',
+    creator: 'Chinese Government',
+    source: 'TIANANMEN.jpg'
   },
   {
-    name: 'Phone Standard',
+    name: 'RARE PEPE',
     price: 299,
-    description: ''
+    description: 'HATE ME',
+    source: '/img/TIANANMEN.jpg'
   }
 ];
 

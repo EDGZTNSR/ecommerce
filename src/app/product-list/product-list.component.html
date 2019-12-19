@@ -6,6 +6,8 @@
     <a [title]="product.name + ' details'">
       {{ product.name }}
     </a>
+    <br>
+    <img src="/assets/{{product.source}}" width="250" height="250"/>
   </h3>
 
   <p *ngIf="product.description">
