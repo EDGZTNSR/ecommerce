@@ -1,6 +1,6 @@
-.singleProduct {
-    border-bottom: black;
-    text-align: center;
+.Products {
+    padding-top: 10px;
+    padding-left: 50px;
 }
 .lineForHR { 
     display: block;
@@ -10,4 +10,12 @@
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
-  } 
+  }
+.linedecoration {
+    text-decoration: line-through;
+}
+
+.productButton {
+    display: flex;
+}
+

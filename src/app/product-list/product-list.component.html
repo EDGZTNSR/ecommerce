@@ -1,21 +1,15 @@
-<h2>Products</h2>
-  <div *ngFor="let product of products" class="singleProduct">
-
+  <div *ngFor="let product of products; index as productId" class="Products">
+    <div class="product">
     <h3>
-      <a [title]="product.name + ' details'">
+      <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
         {{ product.name }}
       </a>
       <br>
       <img src="/assets/{{product.source}}" width="250" height="250"/>
     </h3>
   
-    <p *ngIf="product.description">Description: {{ product.description }}</p>
-    <p *ngIf="product.normalPrice">Normal Price: {{product.normalPrice}}</p>
+    <p *ngIf="product.description" class="listText">Description: {{ product.description }}</p>
+    <p *ngIf="product.normalPrice" class="linedecoration">Normal Price: {{product.normalPrice}}</p>
     <p *ngIf="product.specialPrice">Special Price: {{product.specialPrice}}</p>
-  
-    <button (click)="addToCheckout()">
-      Add to Checkout
-    </button>
-    <hr class="lineForHR">
   
   </div>
