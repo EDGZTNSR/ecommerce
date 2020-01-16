@@ -19,3 +19,7 @@
     display: flex;
 }
 
+.flexonem {
+    display: flex;
+    flex-wrap: wrap;
+}

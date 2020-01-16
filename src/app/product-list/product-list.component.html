@@ -1,15 +1,17 @@
-  <div *ngFor="let product of products; index as productId" class="Products">
-    <div class="product">
-    <h3>
-      <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
-        {{ product.name }}
-      </a>
-      <br>
-      <img src="/assets/{{product.source}}" width="250" height="250"/>
-    </h3>
-  
-    <p *ngIf="product.description" class="listText">Description: {{ product.description }}</p>
-    <p *ngIf="product.normalPrice" class="linedecoration">Normal Price: {{product.normalPrice}}</p>
-    <p *ngIf="product.specialPrice">Special Price: {{product.specialPrice}}</p>
-  
-  </div>
+ <div class="flexonem">
+   <div *ngFor="let product of products; index as productId" class="Products">
+     <div class="product">
+       <h3>
+         <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+           {{ product.name }}
+         </a>
+         <br>
+         <img src="/assets/{{product.source}}" width="250" height="250" [routerLink]="['/products', productId]"/>
+       </h3>
+
+       <p *ngIf="product.description" class="listText">Description: {{ product.description }}</p>
+       <p *ngIf="product.normalPrice" class="linedecoration">Normal Price: {{product.normalPrice}}</p>
+       <p *ngIf="product.specialPrice">Special Price: {{product.specialPrice}}</p>
+
+     </div>
+   </div>

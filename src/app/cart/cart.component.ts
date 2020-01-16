@@ -10,6 +10,7 @@ import { CartService } from '../cart-service/cart.service';
 })
 export class CartComponent implements OnInit {
   items;
+  summarizedPrice: number;
 
   constructor(
     private cartService: CartService
@@ -17,5 +18,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.items = this.cartService.getItems();
+    // this.items = this.cartService.calcPricePerProduct();
+    // this.items = this.cartService.calcQuantityPerProduct();
+
   }
 }
