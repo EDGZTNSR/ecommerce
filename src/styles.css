@@ -48,7 +48,7 @@ p {
 
 a {
   cursor: pointer;
-  color: gray;
+  color: greenyellow;
   text-decoration: none;
 }
 
@@ -83,7 +83,7 @@ label {
   border-radius: 2px;
   font-size: 14px;
   cursor: pointer;
-  background-color:gray;
+  background-color:greenyellow;
   color: white;
   border: none;
 }
@@ -102,11 +102,11 @@ label {
 
 .fancy-button {
   background-color: white;
-  color: gray;
+  color: greenyellow;
 }
 
 .fancy-button i.material-icons {
-  color: gray;
+  color: greenyellow;
   padding-right: 4px;
 }
 
@@ -115,7 +115,7 @@ label {
 app-top-bar {
   width: 100%;
   height: 68px;
-  background-color: gray;
+  background-color:greenyellow;
   padding: 16px;
   display: flex;
   flex-direction: row;
