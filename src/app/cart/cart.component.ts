@@ -11,6 +11,7 @@ import { CookieService } from '../cookie-service/cookie.service'
 })
 export class CartComponent implements OnInit {
   items;
+  globalAmount: number;
   summarizedPrice: number;
 
   constructor(
@@ -19,13 +20,9 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(localStorage.length != 0) {
-
-      this.getCartFromLocalStorage();
-    }
     this.items = this.cartService.getItems();
     this.saveCartToLocalStorage();
-    
+    this.sumItemsInCart();
   }
   saveCartToLocalStorage(){
     localStorage.clear();
@@ -34,13 +31,26 @@ export class CartComponent implements OnInit {
     });
   }
   getCartFromLocalStorage() {
-  //   Object.keys(localStorage).forEach(function(index){
-
-  //  });
-  for (let i = 0; i < localStorage.length; i++) {
-    this.items[0];
-    let key = localStorage.key(i);
-    this.items[i] = localStorage.getItem(key);
-   }
+    for (let i = 0; i < localStorage.length; i++) {
+      this.items[0];
+      let key = localStorage.key(i);
+      this.items[i] = localStorage.getItem(key);
+    }
+  }
+  sumItemsInCart() {
+    this.globalAmount = 0;
+    this.items.forEach((item) => {
+      this.globalAmount += Number(item.amount);
+    });   
+  }
+  loadAmountPlus(index){
+    this.items[index].amount++;
+    this.sumItemsInCart();
+    this.items = this.cartService.calcTotalPrice();
+  }
+  loadAmountMinus(index){
+    this.items[index].amount--;
+    this.items = this.cartService.calcTotalPrice();
+    this.sumItemsInCart();
   }
 }

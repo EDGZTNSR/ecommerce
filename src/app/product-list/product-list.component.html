@@ -10,8 +10,8 @@
        </h3>
 
        <p *ngIf="product.description" class="listText">Description: {{ product.description }}</p>
-       <p *ngIf="product.normalPrice" class="linedecoration">Normal Price: {{product.normalPrice}}</p>
-       <p *ngIf="product.specialPrice">Special Price: {{product.specialPrice}}</p>
+       <p *ngIf="product.normalPrice" class="linedecoration">Normal Price: {{product.normalPrice | currency:'CHF '}}</p>
+       <p *ngIf="product.specialPrice">Special Price: {{product.specialPrice | currency:'CHF '}}</p>
 
      </div>
    </div>

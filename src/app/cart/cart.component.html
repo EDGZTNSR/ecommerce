@@ -1,10 +1,14 @@
 <h3>Cart</h3>
 
-<div class="cart-item" *ngFor="let item of items">
+<div class="cart-item" *ngFor="let item of items; index as i">
   <span>Name: {{ item.name }}</span>
-  <span>Normal Price:<br> {{ item.normalPrice | currency }}</span>
-  <span>Special Price:<br> {{ item.specialPrice | currency }}</span>
-  <span *ngIf="item.summedPrize">Summed Price:<br> {{ item.summedPrize | currency }}</span>
-  <span>Amount: {{item.amount}}</span>
-  <!-- <span>{{summarizedPrice}}</span> -->
+  <span>Normal Price:<br> {{ item.normalPrice | currency:'CHF ' }}</span>
+  <span>Special Price:<br> {{ item.specialPrice | currency:'CHF ' }}</span>
+  <span *ngIf="item.summedPrize > 0">Summed Price:<br> {{ item.summedPrize | currency:'CHF ' }}</span>
+  <span *ngIf="item.amount > 0">Amount: {{item.amount}}</span>
+  <span><button (click)="loadAmountPlus(i)">+</button></span>
+  <span><button (click)="loadAmountMinus(i)">-</button></span>
+</div>
+<div>
+  <p *ngIf="globalAmount > 0">Total Items: {{globalAmount}}</p>
 </div>
