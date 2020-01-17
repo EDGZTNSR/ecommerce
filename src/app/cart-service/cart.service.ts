@@ -16,9 +16,7 @@ export class CartService {
       .filter((value, index, self) => self.indexOf(value) === index);
     let items = [...filtered];
     this.items = items;
-    console.log(this.items);
     this.items = this.calcTotalPrice();
-    // console.log(this.items);
     return this.items;
   }
 
@@ -32,15 +30,4 @@ export class CartService {
     });
     return this.items
   }
-  // calcPrice(){
-  //   this.items.getThatMotherFUckingPriceForPLS();
-  //   return this.items;
-  // }
-  
-  // calcQuantityPerProduct(){
-  //   this.items.forEach(e => {
-      
-  //   });
-  // }
-
 }
