@@ -1,8 +1,10 @@
 <h3>Cart</h3>
 
 <div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
-  <span>{{ item.normalPrice | currency }}</span>
-  <span>{{item.amount}}</span>
+  <span>Name: {{ item.name }}</span>
+  <span>Normal Price:<br> {{ item.normalPrice | currency }}</span>
+  <span>Special Price:<br> {{ item.specialPrice | currency }}</span>
+  <span *ngIf="item.summedPrize">Summed Price:<br> {{ item.summedPrize | currency }}</span>
+  <span>Amount: {{item.amount}}</span>
   <!-- <span>{{summarizedPrice}}</span> -->
 </div>

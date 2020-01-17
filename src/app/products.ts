@@ -5,7 +5,8 @@ export const products = [
     source: 'KHPepe.png',
     specialPrice: 2.0,
     normalPrice: 5.0,
-    amount:0
+    amount:0,
+    summedPrize: 0.0
   },
   {
     name: 'ITPepe',
@@ -13,7 +14,8 @@ export const products = [
     source: 'ITPepe.jpg',
     specialPrice: 2.0,
     normalPrice: 5.0,
-    amount:0
+    amount:0,
+    summedPrize: 0.0
   },
   {
     name: 'Pepe Hands',
@@ -21,7 +23,8 @@ export const products = [
     source: 'pepehands.jpg',
     specialPrice: 2.0,
     normalPrice: 5.0,
-    amount:0
+    amount:0,
+    summedPrize: 0.0
   },
   {
     name: 'Samurai Pepe',
@@ -29,7 +32,8 @@ export const products = [
     source: 'samuraipepe.png',
     specialPrice: 2.0,
     normalPrice: 5.0,
-    amount:0
+    amount:0,
+    summedPrize: 0.0
   },
   {
     name: 'Thicc Pepe',
@@ -37,7 +41,8 @@ export const products = [
     source: 'thiccPepe.png',
     specialPrice: 2.0,
     normalPrice: 5.0,
-    amount:0
+    amount:0,
+    summedPrize: 0.0
   },
   {
     name: 'Imperial Pepe',
@@ -45,7 +50,8 @@ export const products = [
     source: 'imperialpepe.png',
     specialPrice: 2.0,
     normalPrice: 5.0,
-    amount:0
+    amount:0,
+    summedPrize: 0.0
   },
   
 ];
